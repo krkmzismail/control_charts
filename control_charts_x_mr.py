@@ -23,7 +23,7 @@ def get_input():
     chart_data = pd.read_csv(csvfile, index_col=index_column).iloc[:, 0:]
     # chart_data = pd.read_csv(Path(__file__).parent / 'xmr.csv',
     #                          index_col='Sample').iloc[:, 0:]
-    return
+    return chart_data, subgroup_size
 
 
 # x = X(chart_data, subgroup_size)
