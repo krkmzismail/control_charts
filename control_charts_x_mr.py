@@ -15,6 +15,7 @@ import matplotlib.pyplot as plt
 
 from datasense import X, mR
 
+
 def get_input():
     csvfile = input('File name of csv file to read? -> ')
     subgroup_size = int(input('Subgroup size?                 -> '))
@@ -59,3 +60,6 @@ def get_input():
 # ax2.figure.savefig('mr.svg', format='svg')  # Comment if you wish interactive
 # # plt.show() # Uncomment if you wish interactive
 # plt.clf()  # Comment if you wish interactive
+
+if __name__ == '__main__':
+    get_input()
