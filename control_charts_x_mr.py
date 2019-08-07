@@ -23,14 +23,12 @@ def get_input():
     chart_data = pd.read_csv(csvfile, index_col=index_column).iloc[:, 0:]
     # chart_data = pd.read_csv(Path(__file__).parent / 'xmr.csv',
     #                          index_col='Sample').iloc[:, 0:]
-    return chart_data, subgroup_size
+    print('\n\nCSV file:     ', csvfile)
+    print('Subgroup size:', subgroup_size)
+    print('Index column: ', index_column)
+    return subgroup_size, chart_data
 
 
-# x = X(chart_data, subgroup_size)
-#
-# print('\n\nCSV file:     ', csvfile)
-# print('Subgroup size:', subgroup_size)
-# print('Index column: ', index_column)
 # print('\nX chart')
 # print('Upper control limit ', x.ucl, sep=' = ')
 # print('Average moving range', x.mean, sep=' = ')
@@ -62,4 +60,5 @@ def get_input():
 # plt.clf()  # Comment if you wish interactive
 
 if __name__ == '__main__':
-    get_input()
+    subgroup_size, chart_data = get_input()
+    x = X(chart_data, subgroup_size)
