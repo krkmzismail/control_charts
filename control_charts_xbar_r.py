@@ -1,6 +1,12 @@
 #! /usr/bin/env python3
 
-# control_charts/xbar_r_control_charts_example.py
+'''
+Script to read a csv file and create XbarR control charts.
+
+The csv file should have two columns: an index with label, data with label.
+
+./control_charts_xbar_r.py | tee xrbar_r.txt
+'''
 
 # Start of time estimation for the script.
 import datetime as dt
