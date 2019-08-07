@@ -5,7 +5,7 @@ Script to read a csv file and create XmR control charts.
 
 The csv file should have two columns: an index with label, data with label.
 
-./x_mr_control_charts_example.py | tee x_mr.txt
+./control_charts_x_mr.py | tee x_mr.txt
 '''
 
 # from pathlib import Path
