@@ -3,12 +3,10 @@
 '''
 Script to read a csv file and create XmR control charts.
 
-The csv file should have two columns: an index with label, data with label.
+The csv file should have two columns: index with label, data with label.
 
 ./control_charts_x_mr.py | tee x_mr.txt
 '''
-
-# from pathlib import Path
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -21,8 +19,6 @@ def get_input():
     subgroup_size = int(input('Subgroup size?                 -> '))
     index_column = input('Name of index column?          -> ')
     chart_data = pd.read_csv(csvfile, index_col=index_column).iloc[:, 0:]
-    # chart_data = pd.read_csv(Path(__file__).parent / 'xmr.csv',
-    #                          index_col='Sample').iloc[:, 0:]
     print('\n\nCSV file:     ', csvfile)
     print('Subgroup size:', subgroup_size)
     print('Index column: ', index_column)
@@ -41,9 +37,8 @@ def control_chart_x(x):
     ax1.set_title('X control chart' + '\n' 'Subtitle')
     ax1.set_ylabel('Response (units)')
     ax1.set_xlabel('X axis label')
-    ax1.figure.savefig('x.svg', format='svg')  # Comment to be interactive
-    # plt.show()  # Uncomment if you wish interactive
-    plt.clf()  # Comment to be interactive
+    ax1.figure.savefig('x.svg', format='svg')
+    plt.clf()
 
 
 def control_chart_mr(x):
@@ -59,9 +54,8 @@ def control_chart_mr(x):
     ax2.set_title('mR control chart' + '\n' 'Subtitle')
     ax2.set_ylabel('Response (units)')
     ax2.set_xlabel('X axis label')
-    ax2.figure.savefig('mr.svg', format='svg')  # Comment to be interactive
-    # plt.show()  # Uncomment if you wish interactive
-    plt.clf()  # Comment to be interactive
+    ax2.figure.savefig('mr.svg', format='svg')
+    plt.clf()
 
 
 if __name__ == '__main__':
