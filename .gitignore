@@ -1,0 +1,15 @@
+*.html
+*.exe
+*.xz
+*.pdf
+*.svg
+*.png
+*.xlsx
+*.fods
+*.csv
+*.txt
+*.ps
+*.MPJ
+*.mpj
+*checkpoint*
+__pycache__/
