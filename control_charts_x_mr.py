@@ -46,21 +46,23 @@ def control_chart_x(x):
     plt.clf()  # Comment to be interactive
 
 
-# mr = mR(chart_data, subgroup_size)
-# print('\nmR chart')
-# print('Upper control limit ', mr.ucl, sep=' = ')
-# print('Average moving range', mr.mean, sep=' = ')
-# print('Lower control limit ', mr.lcl, sep=' = ')
-# print(f'Sigma(X)', mr.sigma, sep=' = ')
-# for i in range(-3, 4):
-#     print(f'{i} Sigma', ' '.join(map(str, [mr.sigmas[i]])), sep=' = ')
-# ax2 = mr.ax
-# ax2.set_title('mR control chart' + '\n' 'Subtitle')
-# ax2.set_ylabel('Response (units)')
-# ax2.set_xlabel('X axis label')
-# ax2.figure.savefig('mr.svg', format='svg')  # Comment if you wish interactive
-# # plt.show() # Uncomment if you wish interactive
-# plt.clf()  # Comment if you wish interactive
+def control_chart_mr(x):
+    mr = mR(chart_data, subgroup_size)
+    print('\nmR chart')
+    print('Upper control limit ', mr.ucl, sep=' = ')
+    print('Average moving range', mr.mean, sep=' = ')
+    print('Lower control limit ', mr.lcl, sep=' = ')
+    print(f'Sigma(X)', mr.sigma, sep=' = ')
+    for i in range(-3, 4):
+        print(f'{i} Sigma', ' '.join(map(str, [mr.sigmas[i]])), sep=' = ')
+    ax2 = mr.ax
+    ax2.set_title('mR control chart' + '\n' 'Subtitle')
+    ax2.set_ylabel('Response (units)')
+    ax2.set_xlabel('X axis label')
+    ax2.figure.savefig('mr.svg', format='svg')  # Comment to be interactive
+    # plt.show()  # Uncomment if you wish interactive
+    plt.clf()  # Comment to be interactive
+
 
 if __name__ == '__main__':
     subgroup_size, chart_data = get_input()
@@ -69,3 +71,4 @@ if __name__ == '__main__':
     for i in range(-3, 4):
         print(x.sigmas[i])
     control_chart_x(x)
+    control_chart_mr(x)
