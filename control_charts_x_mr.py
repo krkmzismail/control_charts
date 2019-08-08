@@ -41,9 +41,11 @@ def control_chart_x(x):
     ax1.set_title('X control chart' + '\n' 'Subtitle')
     ax1.set_ylabel('Response (units)')
     ax1.set_xlabel('X axis label')
-    ax1.figure.savefig('x.svg', format='svg')  # Comment if you wish interactive
-    # plt.show() # Uncomment if you wish interactive
-plt.clf()  # Comment if you wish interactive
+    ax1.figure.savefig('x.svg', format='svg')  # Comment to be interactive
+    # plt.show()  # Uncomment if you wish interactive
+    plt.clf()  # Comment to be interactive
+
+
 # mr = mR(chart_data, subgroup_size)
 # print('\nmR chart')
 # print('Upper control limit ', mr.ucl, sep=' = ')
