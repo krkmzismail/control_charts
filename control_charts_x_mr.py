@@ -67,8 +67,5 @@ def control_chart_mr(x):
 if __name__ == '__main__':
     subgroup_size, chart_data = get_input()
     x = X(chart_data, subgroup_size)
-    print(x.mean)
-    for i in range(-3, 4):
-        print(x.sigmas[i])
     control_chart_x(x)
     control_chart_mr(x)
