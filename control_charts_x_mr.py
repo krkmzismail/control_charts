@@ -42,7 +42,6 @@ def control_chart_x(x):
 
 
 def control_chart_mr(x):
-    mr = mR(chart_data, subgroup_size)
     print('\nmR chart')
     print('Upper control limit ', mr.ucl, sep=' = ')
     print('Average moving range', mr.mean, sep=' = ')
@@ -61,5 +60,6 @@ def control_chart_mr(x):
 if __name__ == '__main__':
     subgroup_size, chart_data = get_input()
     x = X(chart_data, subgroup_size)
+    mr = mR(chart_data, subgroup_size)
     control_chart_x(x)
     control_chart_mr(x)
