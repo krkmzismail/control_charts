@@ -48,6 +48,13 @@ def control_chart_x(x):
     plt.clf()
 
 def control_chart_mr(x):
+    mr_chart_title = 'mR Control Chart'
+    mr_chart_subtitle = 'Subtitle'
+    mr_chart_ylabel = 'Response (units)'
+    mr_chart_xlabel = 'Sample'
+    print('\nd2', mr._d2, sep=' = ')
+    print('d3', mr._d3, sep=' = ')
+    print('sigma(mR)', mr.sigma, sep=' = ')
     print('\nmR chart')
     print('Upper control limit ', mr.ucl, sep=' = ')
     print('Average moving range', mr.mean, sep=' = ')
@@ -55,11 +62,11 @@ def control_chart_mr(x):
     print(f'Sigma(X)', mr.sigma, sep=' = ')
     for i in range(-3, 4):
         print(f'{i} Sigma', ' '.join(map(str, [mr.sigmas[i]])), sep=' = ')
-    ax2 = mr.ax
-    ax2.set_title('mR control chart' + '\n' 'Subtitle')
-    ax2.set_ylabel('Response (units)')
-    ax2.set_xlabel('X axis label')
-    ax2.figure.savefig('mr.svg', format='svg')
+    ax = mr.ax
+    ax.set_title('mR control chart' + '\n' 'Subtitle')
+    ax.set_ylabel('Response (units)')
+    ax.set_xlabel('X axis label')
+    ax.figure.savefig('mr.svg', format='svg')
     plt.clf()
 
 
