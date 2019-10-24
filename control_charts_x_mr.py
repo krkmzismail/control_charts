@@ -45,7 +45,7 @@ def control_chart_x(x):
     ax = x.ax
     ax.set_title(x_chart_title + '\n' + x_chart_subtitle)
     ax.set_ylabel(x_chart_ylabel)
-    ax.set_xlabel('X axis label')
+    ax.set_xlabel(x_chart_xlabel)
     ax.figure.savefig('x.svg', format='svg')
     plt.clf()
 
