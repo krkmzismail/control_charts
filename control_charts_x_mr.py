@@ -68,7 +68,7 @@ def control_chart_mr(x):
     ax = mr.ax
     ax.set_title(mr_chart_title + '\n' + mr_chart_subtitle)
     ax.set_ylabel(mr_chart_ylabel)
-    ax.set_xlabel('X axis label')
+    ax.set_xlabel(mr_chart_xlabel)
     ax.figure.savefig('mr.svg', format='svg')
     plt.clf()
 
