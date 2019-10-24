@@ -49,6 +49,7 @@ def control_chart_x(x):
     ax.figure.savefig('x.svg', format='svg')
     plt.clf()
 
+
 def control_chart_mr(x):
     mr_chart_title = 'mR Control Chart'
     mr_chart_subtitle = 'Subtitle'
