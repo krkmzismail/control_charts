@@ -13,3 +13,4 @@
 *.mpj
 *checkpoint*
 __pycache__/
+gitignore
