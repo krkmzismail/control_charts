@@ -8,6 +8,8 @@ The csv file should have two columns: index with label, data with label.
 ./control_charts_x_mr.py | tee x_mr.txt
 '''
 
+from pathlib import Path
+
 import pandas as pd
 import matplotlib.pyplot as plt
 
