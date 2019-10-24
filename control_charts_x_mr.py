@@ -66,7 +66,7 @@ def control_chart_mr(x):
     for i in range(-3, 4):
         print(f'{i} Sigma', ' '.join(map(str, [mr.sigmas[i]])), sep=' = ')
     ax = mr.ax
-    ax.set_title(mr_chart_title + '\n' 'Subtitle')
+    ax.set_title(mr_chart_title + '\n' + mr_chart_subtitle)
     ax.set_ylabel('Response (units)')
     ax.set_xlabel('X axis label')
     ax.figure.savefig('mr.svg', format='svg')
