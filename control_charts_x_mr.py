@@ -67,7 +67,7 @@ def control_chart_mr(x):
         print(f'{i} Sigma', ' '.join(map(str, [mr.sigmas[i]])), sep=' = ')
     ax = mr.ax
     ax.set_title(mr_chart_title + '\n' + mr_chart_subtitle)
-    ax.set_ylabel('Response (units)')
+    ax.set_ylabel(mr_chart_ylabel)
     ax.set_xlabel('X axis label')
     ax.figure.savefig('mr.svg', format='svg')
     plt.clf()
