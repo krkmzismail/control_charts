@@ -20,7 +20,8 @@ def get_input():
     csvfile = input('File name of csv file to read? -> ')
     subgroup_size = int(input('Subgroup size?                 -> '))
     index_column = input('Name of index column?          -> ')
-    # chart_data = pd.read_csv(csvfile, index_col=index_column).iloc[:, 0:]
+#     chart_data = pd.read_csv(Path(__file__).parent / 'xmr.csv',
+#                              index_col=index_column).iloc[:, 0:]
     chart_data = pd.read_csv(csvfile, index_col=index_column)
     print('\n\nCSV file:     ', csvfile)
     print('Subgroup size:', subgroup_size)
