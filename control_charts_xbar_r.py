@@ -32,9 +32,9 @@ ax1 = xbar.ax
 ax1.set_title('Xbar control chart' + '\n' 'Subtitle')
 ax1.set_ylabel('Response (units)')
 ax1.set_xlabel('X axis label')
-ax1.figure.savefig('xbar.svg', format='svg') # Comment if you wish interactive
-# plt.show() # Uncomment if you wish interactive
-plt.clf() # Comment if you wish interactive
+ax1.figure.savefig('xbar.svg', format='svg')  # Comment if you wish interactive
+# plt.show()  # Uncomment if you wish interactive
+plt.clf()  # Comment if you wish interactive
 r = R(chart_data)
 print('R chart')
 print('Upper control limit', r.ucl, sep=' = ')
@@ -47,6 +47,6 @@ ax2 = r.ax
 ax2.set_title('R control chart' + '\n' 'Subtitle')
 ax2.set_ylabel('Response (units)')
 ax2.set_xlabel('X axis label')
-ax2.figure.savefig('r.svg', format='svg') # Comment if you wish interactive
-# plt.show() # Uncomment if you wish interactive
-plt.clf() # Comment if you wish interactive
+ax2.figure.savefig('r.svg', format='svg')  # Comment if you wish interactive
+# plt.show()  # Uncomment if you wish interactive
+plt.clf()  # Comment if you wish interactive
